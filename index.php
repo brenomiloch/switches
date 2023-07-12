@@ -8,55 +8,74 @@
 <body>
 
 
-<form>
-  <div class="mb-4">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
-
-
-
-    <h2>Cadastro de Switch</h2>
-    <form method="POST" action="cad_switch.php">
-        <label for="nome">Nome:</label>
-        <input type="text" name="name" required><br>
-
-        <label for="fabricante">Fabricante:</label>
-        <input type="text" name="fabricante" required><br>
-
-        <label for="preco">Preço:</label>
-        <input type="number" name="preco" required><br>
-
-        <input type="submit" value="Cadastrar">
-        <a href="lis_switches.php">Listar Switches</a>
+<div class="container mt-3 pt-3">
+    <form class="row g-3" method="POST" action="cad_switch.php">
+        <div class="col-12">
+        </div>
+        <div class="col-12">
+            <div class="bg-secondary opacity-75 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">
+                Cadastre-se
+            </div>
+            <a href="lis_switches.php">LISTAR</a>
+            <hr>
+        </div>
+        <div class="col-12">
+            <label for="inputName" class="form-label">nome</label>
+            <input type="text" class="form-control" name="nome" placeholder="Name">
+            
+        </div>
+        <div class="col-12">
+            <label for="inputName" class="form-label">fabricante</label>
+            <input type="text" class="form-control" name="fabricante" placeholder="Name">
+            
+        </div>
+        <div class="col-12">
+            <label for="inputName" class="form-label">addres</label>
+            <input type="text" class="form-control" name="addres" placeholder="Name">
+            
+        </div>
+        <div class="col-12 text-end">
+            <button type="submit" value="Cadastrar" class="btn btn-dark w-100 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">Salvar</button>
+        </div>
     </form>
+</div>
 
-    <h2>Edição de Switch</h2>
-    <form method="POST" action="edit_switch.php">
+
+
+<div class="container mt-3 pt-3" >
+    <form class="row g-3" method="POST" action="edit_switch.php">
+        <div class="col-12">
+        </div>
+        <div class="col-12">
+            <div class="bg-secondary opacity-75 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">
+                Edição
+            </div>
+            <hr>
+        </div>
+        <div class="col-12">
         <label for="name_antigo">Nome Antigo:</label>
-        <input type="text" name="name_antigo" required><br>
-
+        <input type="text" class="form-control" name="nome_antigo" required><br>
+            
+        </div>
+        <div class="col-12">
         <label for="novo_nome">Novo Nome:</label>
-        <input type="text" name="novo_nome" required><br>
-
+        <input type="text" class="form-control" name="novo_nome" required><br>
+            
+        </div>
+        <div class="col-12">
         <label for="fabricante">Fabricante:</label>
-        <input type="text" name="fabricante" required><br>
-
-        <label for="preco">Preço:</label>
-        <input type="number" name="preco" required><br>
-
-        <input type="submit" value="Editar">
+        <input type="text" class="form-control" name="fabricante" required><br>
+            
+        </div>
+        <div class="col-12">
+        <label for="fabricante">IP:</label>
+        <input type="text" class="form-control" name="addres" required><br>
+            
+        </div>
+        <div class="col-12 text-end">
+            <button type="submit" value="Cadastrar" class="btn btn-dark w-100 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">Edição</button>
+            
+        </div>
     </form>
-
+</div>

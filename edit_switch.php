@@ -4,12 +4,13 @@ include 'config.php';
 
 // Processamento do formulário de edição
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name_antigo = $_POST["name_antigo"];
+    $nome_antigo = $_POST["nome_antigo"];
     $novo_nome = $_POST["novo_nome"];
     $fabricante = $_POST["fabricante"];
+    $addres = $_POST["addres"];
 
     // Atualização dos dados no banco de dados
-    $sql = "UPDATE switches SET name='$novo_name', fabricante='$fabricante' WHERE name='$name_antigo'";
+    $sql = "UPDATE switches SET nome='$novo_nome', fabricante='$fabricante', addres='$addres' WHERE nome='$nome_antigo'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Dados atualizados com sucesso!";

@@ -3,12 +3,13 @@
 
 // Processamento do formulário de cadastro
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST["name"];
+    $nome = $_POST["nome"];
     $fabricante = $_POST["fabricante"];
+    $addres = $_POST["addres"];
     
 
     // Inserção dos dados no banco de dados
-    $sql = "INSERT INTO switches (name, fabricante) VALUES ('$nome', '$fabricante')";
+    $sql = "INSERT INTO switches (nome, fabricante , addres) VALUES ('$nome', '$fabricante' , '$addres')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Cadastro realizado com sucesso!";

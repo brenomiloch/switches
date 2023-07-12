@@ -2,7 +2,7 @@
 
 include 'config.php';
 
-$sql = "SELECT * FROM switches ORDER BY name";
+$sql = "SELECT * FROM switches ORDER BY nome";
 
 $result = $conn->query($sql);
 
@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
     echo "<table>";
     echo "<tr><th>ID</th><th>Nome</th><th>Fabricante</th><th>";
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td>" . $row["fabricante"] . "</td><td>";
+        echo "<tr><td>" . $row["id"] . "</td><td>" . $row["nome"] . "</td><td>" . $row["fabricante"] . "</td><td>" . $row["addres"];
     }
     echo "</table>";
 } else {
