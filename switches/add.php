@@ -14,7 +14,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="../index.php">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,43 +56,3 @@
 
     </form>
 </div>
-
-
-
-<!-- 
-<div class="container mt-3 pt-3" >
-    <form class="row g-3" method="POST" action="edit_switch.php">
-        <div class="col-12">
-        </div>
-        <div class="col-12">
-            <div class="bg-secondary opacity-75 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">
-                Edição
-            </div>
-            <hr>
-        </div>
-        <div class="col-12">
-        <label for="name_antigo">Nome Antigo:</label>
-        <input type="text" class="form-control" name="nome_antigo" required><br>
-            
-        </div>
-        <div class="col-12">
-        <label for="novo_nome">Novo Nome:</label>
-        <input type="text" class="form-control" name="novo_nome" required><br>
-            
-        </div>
-        <div class="col-12">
-        <label for="fabricante">Fabricante:</label>
-        <input type="text" class="form-control" name="fabricante" required><br>
-            
-        </div>
-        <div class="col-12">
-        <label for="fabricante">IP:</label>
-        <input type="text" class="form-control" name="addres" required><br>
-            
-        </div>
-        <div class="col-12 text-end">
-            <button type="submit" value="Cadastrar" class="btn btn-dark w-100 bg-gradient p-3 text-center mb-2 text-white fw-bolder fs-3">Edição</button>
-            
-        </div>
-    </form>
-</div> -->

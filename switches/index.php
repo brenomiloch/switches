@@ -21,7 +21,7 @@ $result = $conn->query($sql);
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">NoSwitch</a>
+    <a class="navbar-brand" href="../index.php">NoSwitch</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,10 +59,16 @@ $result = $conn->query($sql);
                             <td><?php echo $row["addres"]; ?></td>
                             <td class="actions text-right">
 			<a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
-			<a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
-			<a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-switch="<?php echo $row['id']; ?>">
-				<i class="fa fa-trash"></i> Excluir
-			</a>
+			<a href="edit_switch.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
+      <a href="del_switch.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger"><i class="fa fa-pencil"></i> Excluir</a>
+
+
+      <!-- <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete-modal" data-switchid="<?php echo $row['id']; ?>">
+    <i class="fa fa-trash"></i> Excluir
+</a> -->
+
+
+
 		</td>
                         </tr>
                     <?php endwhile; ?>
@@ -75,4 +81,6 @@ $result = $conn->query($sql);
 
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <?php include('modal.php'); ?>

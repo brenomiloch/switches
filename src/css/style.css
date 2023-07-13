@@ -41,6 +41,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 } */
+a{
+    margin-left: 10px;
+}
+th,td{
+    color: rgb(100, 193, 255);
+    text-align: center;
+}
+body{
+    background-color: black;
+    color:  rgb(100, 193, 255);
+}
 .main{
     margin-top: 15px;
     /* background-color: red; */
@@ -60,3 +71,39 @@ label{
 .container h1 {
     text-align: center;
 }
+
+
+
+.form-signin {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
