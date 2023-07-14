@@ -12,6 +12,13 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
   $resultSwitch = mysqli_query($conn, $querySwitch);
   $switch = mysqli_fetch_assoc($resultSwitch);
 
+
+  // Verifique se o switch existe
+  if($switch) {
+    // Recupere o nome do switch
+    $switchName = $switch['nome'];
+  }
+
   // Consulte o banco de dados para obter as portas relacionadas ao switch
   $queryPortas = "SELECT * FROM portas WHERE id_switches = $switchId";
   $resultPortas = mysqli_query($conn, $queryPortas);
@@ -49,7 +56,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
 </nav>
 
 <div class="container mt-4 pt-4">
-  <h1>LISTAR PORTAS</h1>
+  <h1>LISTAR PORTAS DO <?php echo $switchName; ?></h1>
+  
   <?php if(mysqli_num_rows($resultPortas) > 0): ?>
     <table class="table table-striped">
       <thead>
