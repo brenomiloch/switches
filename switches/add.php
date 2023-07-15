@@ -46,7 +46,15 @@
         </div>
         <div class="col-6">
             <label for="inputName" class="form-label">IP</label>
-            <input type="text" class="form-control" name="addres" placeholder="192.168.7.X" required>
+            <input type="text" class="form-control" name="endereco_ip" placeholder="192.168.7.X" required>
+        </div>
+        <div class="col-6 pt-4">
+            <label for="inputName" class="form-label">MAC</label>
+            <input type="text" class="form-control" name="endereco_mac" placeholder="XX-XX-XX-XX-XX-XX" required>
+        </div>
+        <div class="col-6 pt-4">
+            <label for="inputName" class="form-label">Patrimônio</label>
+            <input type="text" class="form-control" name="numero_patrimonio" placeholder="PI0123" required>
         </div>
         </div>
         <div class="col text-center">

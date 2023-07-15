@@ -79,16 +79,79 @@ include '../config.php';
             </select>
         </div>
         <div class="col-md-6">
-            <label for="inputTipo" class="form-label">Tipo</label>
+            <label for="inputTipo" class="form-label">PORTA</label>
             <input type="text" class="form-control" name="tipo" placeholder="Tipo" required>
         </div>
         </div>
+
         <div class="row mb-3">
         <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Status</label>
-            <input type="text" class="form-control" name="status" placeholder="Status" required>
+            <label for="inputStatus" class="form-label">Link Tipo</label>
+            <input type="text" class="form-control" name="link_type" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Vlan Untagged</label>
+            <input type="text" class="form-control" name="vlan_untagged" placeholder="" required>
         </div>
         </div>
+
+        <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Vlan Tagged</label>
+            <input type="text" class="form-control" name="vlan_tagged" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Patch Panel</label>
+            <input type="text" class="form-control" name="patch_panel" placeholder="" required>
+        </div>
+        </div>
+
+        <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Sala</label>
+            <input type="text" class="form-control" name="sala" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Setor</label>
+            <input type="text" class="form-control" name="setor" placeholder="" required>
+        </div>
+        </div>
+
+        <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Ponto de referencia</label>
+            <input type="text" class="form-control" name="referencia_ponto" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Tipo</label>
+            <input type="text" class="form-control" name="tipo_equipamento" placeholder="" required>
+        </div>
+        </div>
+
+        <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">Modelo</label>
+            <input type="text" class="form-control" name="modelo_equipamento" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">IP</label>
+            <input type="text" class="form-control" name="endereco_ip" placeholder="" required>
+        </div>
+        </div>
+
+        <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">MAC</label>
+            <input type="text" class="form-control" name="endereco_mac" placeholder="" required>
+        </div>
+        <div class="col-md-6">
+            <label for="inputStatus" class="form-label">PATRIMÔNIO</label>
+            <input type="text" class="form-control" name="numero_patrimonio" placeholder="" required>
+        </div>
+        </div>
+
+        
+
         <div class="col text-center">
             <button type="submit" value="Cadastrar" class="btn btn-dark bg-gradient text-center">Salvar</button>
             <a href="../index.php" class="btn btn-secondary">Cancelar</a>

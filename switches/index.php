@@ -43,20 +43,22 @@ $result = $conn->query($sql);
             <table class="table table-striped">
                 <thead> 
                     <tr>
-                        <th>ID</th>
+                        <th>Patrimônio</th>
                         <th>Nome</th>
                         <th>Fabricante</th>
                         <th>IP</th>
+                        <th>MAC</th>
                         <th>Opções</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php while ($row = $result->fetch_assoc()): ?>
                         <tr>
-                            <td><?php echo $row["id"]; ?></td>
+                            <td><?php echo $row["numero_patrimonio"]; ?></td>
                             <td><?php echo $row["nome"]; ?></td>
                             <td><?php echo $row["fabricante"]; ?></td>
-                            <td><?php echo $row["addres"]; ?></td>
+                            <td><?php echo $row["endereco_ip"]; ?></td>
+                            <td><?php echo $row["endereco_mac"]; ?></td>
                             <td class="actions text-right">
 			<a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Visualizar</a>
 			<a href="edit_switch.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Editar</a>
