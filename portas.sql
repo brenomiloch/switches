@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Jul-2023 às 20:33
+-- Tempo de geração: 15-Jul-2023 às 20:34
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -24,46 +24,56 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `switches`
+-- Estrutura da tabela `portas`
 --
 
-CREATE TABLE `switches` (
+CREATE TABLE `portas` (
   `id` int(11) NOT NULL,
-  `nome` varchar(200) DEFAULT NULL,
-  `fabricante` varchar(250) DEFAULT NULL,
+  `id_switch` int(11) DEFAULT NULL,
+  `link_type` varchar(200) DEFAULT NULL,
+  `vlan_untagged` varchar(200) DEFAULT NULL,
+  `vlan_tagged` varchar(200) DEFAULT NULL,
+  `patch_panel` varchar(200) DEFAULT NULL,
+  `sala` varchar(200) DEFAULT NULL,
+  `setor` varchar(200) DEFAULT NULL,
+  `referencia_ponto` varchar(200) DEFAULT NULL,
+  `tipo_equipamento` varchar(200) DEFAULT NULL,
+  `modelo_equipamento` varchar(200) DEFAULT NULL,
   `endereco_ip` varchar(250) DEFAULT NULL,
   `endereco_mac` varchar(250) DEFAULT NULL,
   `numero_patrimonio` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `switches`
---
-
-INSERT INTO `switches` (`id`, `nome`, `fabricante`, `endereco_ip`, `endereco_mac`, `numero_patrimonio`) VALUES
-(6, 'SW UNIPA 7.22', 'HP', '192.168.7.22', '40-b9-3c-8f-1f-df', '12927'),
-(7, 'SW INFORMATICA 7.36', 'HP', '192.168.7.36', 'D8:94:03:45:51:B4', '12818'),
-(8, 'SW MESA THYAGO 7.57', 'HP', '192.168.7.57', '40-b9-3c-8f-1a-1f', '12932');
-
---
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `switches`
+-- Índices para tabela `portas`
 --
-ALTER TABLE `switches`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `portas`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_switch` (`id_switch`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT de tabela `switches`
+-- AUTO_INCREMENT de tabela `portas`
 --
-ALTER TABLE `switches`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `portas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `portas`
+--
+ALTER TABLE `portas`
+  ADD CONSTRAINT `portas_ibfk_1` FOREIGN KEY (`id_switch`) REFERENCES `switches` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
