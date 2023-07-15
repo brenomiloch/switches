@@ -1,4 +1,4 @@
-## RELEASE #1 
+## RELEASE #1.0.6
 
 ![NoLogo](src/img/network-switch-256.png)
 # **NoSwitch**
