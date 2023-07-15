@@ -47,9 +47,9 @@ NoSwitch funções:
 
 ## Pré requisito
 
-* A web server (Apache, Nginx, IIS, etc.)
-* MariaDB >= 10.2 or MySQL >= 5.7
-* PHP ( Versão >= 8.2.4)
+* A web server (Apache, Xampp, IIS ou qualquer web server para php.)
+* MariaDB >= 10.4.27 ou MySQL >= 8.0.25
+* PHP ( Versão >= 8.0.25)
 
    
 ## Suporte
