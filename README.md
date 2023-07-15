@@ -7,6 +7,8 @@ Este é um {c:red}texto vermelho.{/c}
 
 The background color is `#ffffff` for light mode and `#000000` for dark mode.
 
+# 2014, The year of [Blue](#)
+
 
 ![NoLogo](src/img/network-switch-256.png)
 # **NoSwitch**
