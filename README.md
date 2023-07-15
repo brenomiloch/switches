@@ -1,6 +1,6 @@
 
 
-![GLPI Logo](../network-switch-256.png)
+![GLPI Logo](src/img/network-switch-256.png)
 # **NoSwitch**
 
 
