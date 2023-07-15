@@ -1,6 +1,6 @@
+## RELEASE #1 
 
-
-![GLPI Logo](src/img/network-switch-256.png)
+![NoLogo](src/img/network-switch-256.png)
 # **NoSwitch**
 
 
