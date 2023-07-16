@@ -75,50 +75,40 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado
 if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
-    // Se estiver logado, exibe o nome do usuário e o botão de logout
-    echo "<p>Bem-vindo, $username!</p>";
-    echo '
-    <form method="POST" action="switches/modal/logout_process.php">
+    ?>
+    <p>Bem-vindo, <?php echo $username; ?>!</p>
+    <form method="POST" action="usuario/modal/logout_process.php">
         <button type="submit" class="btn btn-success">Logout</button>
     </form>
-    ';
+    <?php
 } else {
-    // Se não estiver logado, exibe o formulário de login
-    echo '
-
-
+    ?>
     <main class="form-signin">
-    <form method="POST" action="switches/modal/login_process.php">
-      <img class="mb-0" src="src/img/network-switch-256.png" alt="" width="146" height="116">
-      <h1>No Switch</h1>
-<hr>
-      <h1 class="h3 mb-3 fw-normal">LOGIN</h1>
+        <form method="POST" action="usuario/login_process.php">
+            <img class="mb-0" src="src/img/network-switch-256.png" alt="" width="146" height="116">
+            <h1>No Switch</h1>
+            <hr>
+            <h1 class="h3 mb-3 fw-normal">LOGIN</h1>
   
-      <div class="form-floating">
-        <label for="username" class="form-label"></label>
-        <input type="text" class="form-control" name="username" placeholder="Usuário" required>
-      </div>
-      <div class="form-floating">
-      <label for="password" class="form-label"></label>
-            <input type="password" class="form-control" name="password" placeholder="Password" required>
-      </div>
+            <div class="form-floating">
+                <label for="username" class="form-label"></label>
+                <input type="text" class="form-control" name="username" placeholder="Usuário" value="Usuário" required>
+            </div>
+            <div class="form-floating pt-2">
+                <label for="password" class="form-label"></label>
+                <input type="password" class="form-control" name="password" placeholder="Password" value="Senha" required>
+            </div>
   
- 
- 
-      <button class="w-100 btn btn-lg btn-primary" type="submit">LOGIN</button>
-      <p class="mt-5 mb-3 text-muted">&copy;NoSwitch - 2023</p>
-    </form>
-  </main>
-
-
-
-
-    ';
+            <button class="w-100 btn btn-lg btn-primary" type="submit">LOGIN</button>
+            <p class="mt-5 mb-3 text-muted">&copy;NoSwitch - 2023</p>
+        </form>
+    </main>
+    <?php
 }
 ?>
+
 
 
 

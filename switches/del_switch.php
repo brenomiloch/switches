@@ -9,8 +9,14 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM switches WHERE id = '$switchId'";
 
     if ($conn->query($sql) === TRUE) {
-        // Redirecionar para o index.php após a exclusão
-        header("Location: index.php");
+
+        // Cadastro realizado com sucesso
+        echo "<script>alert(\"Switch deletado com sucesso!\")</script>";
+        // função setTimeout do JavaScript para aguardar 0 segundos ( 0 milissegundos) antes de 
+        // redirecionar para "index.php". Após o tempo especificado, o código window.location.href = 'index.php' 
+        // redirecionará o navegador automaticamente, sem a necessidade de interação do usuário.
+        echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";        
+        
         exit();
     } else {
         echo "Erro na exclusão do switch: " . $conn->error;

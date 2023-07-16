@@ -2,14 +2,23 @@
 
 include 'config.php';
 
+?>
+
+<?php
+
 session_start();
 
-// Verifique se o usuário está autenticado
-if (!isset($_SESSION["username"])) {
-  header("Location: index.php");
+// Verifique se o usuário está logado e tem permissão para acessar a página
+  if (!isset($_SESSION['username']) || !isset($_SESSION['nivel_acesso']) || $_SESSION['nivel_acesso'] >3) {
+
+    echo "<script>alert(\"Permissão insuficiente. Contate o administrador. \")</script>";
+    echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";
+
   exit();
 }
+echo "Deu bom";
 ?>
+
 
 
 <!DOCTYPE html>
@@ -86,7 +95,7 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
 
-        <div class="col-xs-6 col-sm-3 col-md-2">
+        <!-- <div class="col-xs-6 col-sm-3 col-md-2">
             <a href="switches/view.php" class="btn btn-secondary">
                 <div class="row">
                     <div class="col-xs-12 text-center">
@@ -98,7 +107,7 @@ if (!isset($_SESSION["username"])) {
                 </div>
             </a>
         </div>
-    </div>
+    </div> -->
     
 
 

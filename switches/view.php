@@ -65,10 +65,12 @@ td{
 
 <div class="container mt-4 pt-4">
   <h1>LISTAR PORTAS DO <?php echo $switchName; ?></h1>
-  
+  <hr>
+  <hr>
   <?php if(mysqli_num_rows($resultPortas) > 0): ?>
     <table class="table table-striped">
       <thead>
+      
         <tr>
           <th>Portas</th>
           <th>Patch Panel</th>
@@ -102,7 +104,7 @@ td{
             <td><?php echo $row['endereco_ip']; ?></td>
             <td><?php echo $row['endereco_mac']; ?></td>
             <td><?php echo $row['numero_patrimonio']; ?></td>
-            <td><a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+            <td><a href="#" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
 
 
           </tr>

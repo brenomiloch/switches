@@ -1,6 +1,6 @@
 <?php
 
-include '../../config.php';
+include '../config.php';
 
 // login_process.php
 session_start();
@@ -22,20 +22,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (md5($password) == $user['password']) {
       // Autenticação bem-sucedida, inicie a sessão e redirecione para a página desejada
       $_SESSION["username"] = $username;
-      header("Location: ../../dashboard.php");
-      echo '<script>alert("Senha correta, logado!!.");</script>';
+      $_SESSION["nivel_acesso"] = $user['nivel_acesso'];
+      // header("Location: ../dashboard.php");
+      // echo '<script>alert("Senha correta, logado!!.");</script>';
+
+      echo "<script>alert(\"Senha correta, logado!!.\")</script>";
+      echo "<script>setTimeout(function(){ window.location.href = '../dashboard.php'; }, 0);</script>";
+
       exit();
     } else {
       // Senha incorreta, exiba uma mensagem de erro
       $loginError = "Senha incorreta. Por favor, tente novamente.";
-      echo '<script>alert("Senha incorreta. Por favor, tente novamente.");</script>';
-      header("Location: ../../index.php");
+
+      echo "<script>alert(\"Senha incorreta. Por favor, tente novamente!\")</script>";
+      echo "<script>setTimeout(function(){ window.location.href = '../index.php'; }, 0);</script>";
+
     }
   } else {
     // Nome de usuário não encontrado, exiba uma mensagem de erro
     $loginError = "Nome de usuário não encontrado. Por favor, tente novamente.";
-    echo '<script>alert("Nome de usuário não encontrado. Por favor, tente novamente.");</script>';
-    header("Location: ../../index.php");
+
+    echo "<script>alert(\"Nome de usuário não encontrado. Por favor, tente novamente!\")</script>";
+    echo "<script>setTimeout(function(){ window.location.href = '../index.php'; }, 0);</script>";
+
 }
 }
 

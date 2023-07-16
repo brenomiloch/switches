@@ -12,7 +12,12 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         $switch = $result->fetch_assoc();
     } else {
-        echo "Switch não encontrado.";
+                // Cadastro realizado com sucesso
+                echo "<script>alert(\"Switch editado com sucesso!\")</script>";
+                // função setTimeout do JavaScript para aguardar 2 segundos (2000 milissegundos) antes de 
+                // redirecionar para "index.php". Após o tempo especificado, o código window.location.href = 'index.php' 
+                // redirecionará o navegador automaticamente, sem a necessidade de interação do usuário.
+                echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";
         exit();
     }
 } else {

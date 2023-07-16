@@ -27,10 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
     if ($conn->query($sql) === TRUE) {
+
         // Cadastro realizado com sucesso
-        // echo "Cadastro realizado com sucesso!";
-        // Redirecionamento para o index.php após 2 segundos
-        header("refresh:2; url=cad_portas.php");
+        echo "<script>alert(\"Porta cadastrada com sucesso!\")</script>";
+        // função setTimeout do JavaScript para aguardar 2 segundos (2000 milissegundos) antes de 
+        // redirecionar para "index.php". Após o tempo especificado, o código window.location.href = 'index.php' 
+        // redirecionará o navegador automaticamente, sem a necessidade de interação do usuário.
+        echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";
+
         exit(); // Encerra o script após o redirecionamento
     } else {
         echo "Erro no cadastro: " . $conn->error;
