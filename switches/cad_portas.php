@@ -7,18 +7,30 @@ $resultSwitches = mysqli_query($conn, $querySwitches);
 
 // Processamento do formulário de cadastro
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id_switches = $_POST["id_switches"];
-    $tipo = $_POST["tipo"];
-    $status = $_POST["status"];
+    $id_switch = $_POST["id_switch"];
+    $link_type = $_POST["link_type"];
+    $vlan_untagged = $_POST["vlan_untagged"];
+    $vlan_tagged = $_POST["vlan_tagged"];
+    $patch_panel = $_POST["patch_panel"];
+    $sala = $_POST["sala"];
+    $setor = $_POST["setor"];
+    $referencia_ponto = $_POST["referencia_ponto"];
+    $tipo_equipamento = $_POST["tipo_equipamento"];
+    $modelo_equipamento = $_POST["modelo_equipamento"];
+    $endereco_ip = $_POST["endereco_ip"];
+    $endereco_mac = $_POST["endereco_mac"];
+    $numero_patrimonio = $_POST["numero_patrimonio"];
+    $portas = $_POST["portas"];
 
     // Inserção dos dados no banco de dados
-    $sql = "INSERT INTO Portas (id_switches, tipo, status) VALUES ('$id_switches', '$tipo', '$status')";
+    $sql = "INSERT INTO portas (id_switch, link_type, vlan_untagged,vlan_tagged,patch_panel,sala,setor,referencia_ponto,tipo_equipamento,modelo_equipamento,endereco_ip,endereco_mac,numero_patrimonio,portas) VALUES ('$id_switch', '$link_type', '$vlan_untagged','$vlan_tagged','$patch_panel','$sala','$setor','$referencia_ponto','$tipo_equipamento','$modelo_equipamento','$endereco_ip','$endereco_mac','$numero_patrimonio','$portas')";
+  
 
     if ($conn->query($sql) === TRUE) {
         // Cadastro realizado com sucesso
         // echo "Cadastro realizado com sucesso!";
         // Redirecionamento para o index.php após 2 segundos
-        header("refresh:2; url=index.php");
+        header("refresh:2; url=cad_portas.php");
         exit(); // Encerra o script após o redirecionamento
     } else {
         echo "Erro no cadastro: " . $conn->error;
@@ -69,7 +81,7 @@ include '../config.php';
         <div class="row mb-3">
         <div class="col-md-6">
             <label for="inputSwitch" class="form-label">Switch</label>
-            <select class="form-control" name="id_switches">
+            <select class="form-control" name="id_switch" required>
                 <?php
                 // Exibir os switches cadastrados no dropdown
                 while($row = mysqli_fetch_assoc($resultSwitches)) {
@@ -80,7 +92,7 @@ include '../config.php';
         </div>
         <div class="col-md-6">
             <label for="inputTipo" class="form-label">PORTA</label>
-            <input type="text" class="form-control" name="tipo" placeholder="Tipo" required>
+            <input type="text" class="form-control" name="portas" placeholder="Tipo" required>
         </div>
         </div>
 

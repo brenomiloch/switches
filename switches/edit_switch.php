@@ -74,10 +74,20 @@ $conn->close();
             </div>
             <div class="form-group">
                 <label for="ip">IP:</label>
-                <input type="text" class="form-control" id="addres" name="addres" value="<?php echo $switch['addres']; ?>">
+                <input type="text" class="form-control" id="endereco_ip" name="endereco_ip" value="<?php echo $switch['endereco_ip']; ?>">
             </div>
+            <div class="form-group">
+                <label for="ip">IP:</label>
+                <input type="text" class="form-control" id="endereco_mac" name="endereco_mac" value="<?php echo $switch['endereco_mac']; ?>">
+            </div>
+            <div class="form-group">
+                <label for="ip">IP:</label>
+                <input type="text" class="form-control" id="numero_patrimonio" name="numero_patrimonio" value="<?php echo $switch['numero_patrimonio']; ?>">
+            </div>
+            <div class="pt-4">
             <button type="submit" class="btn btn-primary">Salvar</button>
             <a href="index.php" class="btn btn-secondary">Cancelar</a>
+            </div>
         </form>
     </div>
 </body>

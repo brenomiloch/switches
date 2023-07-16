@@ -20,7 +20,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
   }
 
   // Consulte o banco de dados para obter as portas relacionadas ao switch
-  $queryPortas = "SELECT * FROM portas WHERE id_switches = $switchId";
+  $queryPortas = "SELECT * FROM portas WHERE id_switch = $switchId";
   $resultPortas = mysqli_query($conn, $queryPortas);
 ?>
 
@@ -34,7 +34,15 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
     <!-- <link rel="stylesheet" href="src/css/fontawesome.min.css"> -->
 
     <title>NoSWITCH</title>
-    
+    <style>
+
+td{
+  
+  text-align: center;
+
+}
+
+    </style>
 </head>
 <body>
 
@@ -62,15 +70,41 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>Portas</th>
+          <th>Patch Panel</th>
+          <th>Tipo Link</th>
+          <th>Vlan Untagged</th>
+          <th>Vlan Tagged</th>
+          <th>Sala</th>
+          <th>Setor</th>
+          <th>Ref. Ponto</th>
           <th>Tipo</th>
-          <th>Status</th>
+          <th>Modelo</th>
+          <th>IP</th>
+          <th>MAC </th>
+          <th>PATRIMÔNIO</th>
+          <th><i class="fa-solid fa-gear"></i></th>
         </tr>
       </thead>
       <tbody>
         <?php while($row = mysqli_fetch_assoc($resultPortas)): ?>
           <tr>
-            <td><?php echo $row['tipo']; ?></td>
-            <td><?php echo $row['status']; ?></td>
+            <td><?php echo $row['portas']; ?></td>
+            <td><?php echo $row['patch_panel']; ?></td>
+            <td><?php echo $row['link_type']; ?></td>
+            <td><?php echo $row['vlan_untagged']; ?></td>
+            <td><?php echo $row['vlan_tagged']; ?></td>
+            <td><?php echo $row['sala']; ?></td>
+            <td><?php echo $row['setor']; ?></td>
+            <td><?php echo $row['referencia_ponto']; ?></td>
+            <td><?php echo $row['tipo_equipamento']; ?></td>
+            <td><?php echo $row['modelo_equipamento']; ?></td>
+            <td><?php echo $row['endereco_ip']; ?></td>
+            <td><?php echo $row['endereco_mac']; ?></td>
+            <td><?php echo $row['numero_patrimonio']; ?></td>
+            <td><a href="view.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
+
+
           </tr>
         <?php endwhile; ?>
       </tbody>
@@ -91,3 +125,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
   // echo "ID do switch não fornecido.";
 }
 ?>
+<script src="src/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d04954ca67.js" crossorigin="anonymous"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>

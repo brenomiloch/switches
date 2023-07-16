@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Jul-2023 às 20:33
+-- Tempo de geração: 16-Jul-2023 às 02:06
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -41,9 +41,7 @@ CREATE TABLE `switches` (
 --
 
 INSERT INTO `switches` (`id`, `nome`, `fabricante`, `endereco_ip`, `endereco_mac`, `numero_patrimonio`) VALUES
-(6, 'SW UNIPA 7.22', 'HP', '192.168.7.22', '40-b9-3c-8f-1f-df', '12927'),
-(7, 'SW INFORMATICA 7.36', 'HP', '192.168.7.36', 'D8:94:03:45:51:B4', '12818'),
-(8, 'SW MESA THYAGO 7.57', 'HP', '192.168.7.57', '40-b9-3c-8f-1a-1f', '12932');
+(9, 'SW PATRIMONIO 01 ', 'HP', '192.168.7.50', 'e8-f7-24-82-8e-cb', '12705');
 
 --
 -- Índices para tabelas despejadas
@@ -63,7 +61,7 @@ ALTER TABLE `switches`
 -- AUTO_INCREMENT de tabela `switches`
 --
 ALTER TABLE `switches`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
