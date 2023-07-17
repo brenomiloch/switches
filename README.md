@@ -54,7 +54,7 @@ NoSwitch funções:
 
 **Mapeamento de portas**
 
-![asset view](src/img/readme/LISTAR_portas1.png)
+![asset view](src/img/readme/LISTAR_portas11.png)
 
 
 ## Pré requisito
