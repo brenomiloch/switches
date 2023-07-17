@@ -36,12 +36,6 @@ CREATE TABLE `switches` (
   `numero_patrimonio` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Extraindo dados da tabela `switches`
---
-
-INSERT INTO `switches` (`id`, `nome`, `fabricante`, `endereco_ip`, `endereco_mac`, `numero_patrimonio`) VALUES
-(9, 'SW PATRIMONIO 01 ', 'HP', '192.168.7.50', 'e8-f7-24-82-8e-cb', '12705');
 
 --
 -- Índices para tabelas despejadas

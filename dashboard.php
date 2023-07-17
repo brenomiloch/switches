@@ -9,7 +9,7 @@ include 'config.php';
 session_start();
 
 // Verifique se o usuário está logado e tem permissão para acessar a página
-  if (!isset($_SESSION['username']) || !isset($_SESSION['nivel_acesso']) || $_SESSION['nivel_acesso'] >3) {
+  if (!isset($_SESSION['username']) ) {
 
     echo "<script>alert(\"Permissão insuficiente. Contate o administrador. \")</script>";
     echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";

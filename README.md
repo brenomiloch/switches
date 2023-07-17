@@ -42,9 +42,14 @@ NoSwitch funções:
 
 ![asset view](src/img/readme/cadastro1.png)
 
-**Listar de Switches**
+**Listar Switches**
 
 ![asset view](src/img/readme/listar1.png)
+
+
+**Cadastra portas**
+
+![asset view](src/img/readme/cadastro_portas.png)
 
 
 **Mapeamento de portas**

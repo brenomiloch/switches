@@ -108,16 +108,6 @@ if (isset($_SESSION['username'])) {
     <?php
 }
 ?>
-
-
-
-
-
-
-
-
-
-
 <script src="src/js/bootstrap.bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/d04954ca67.js" crossorigin="anonymous"></script>
 <script src="src/js/main.js"></script>
