@@ -83,7 +83,7 @@ echo "Deu bom";
 
     <div class="row d-flex justify-content-center">
     <div class="col-xs-6 col-sm-3 col-md-2">
-            <a href="switches/cad_portas.php" class="btn btn-secondary">
+            <a href="portas/cad_portas.php" class="btn btn-secondary">
                 <div class="row">
                     <div class="col-xs-12 text-center">
                         <i class="fa fa-plus fa-5x"></i>
@@ -94,6 +94,46 @@ echo "Deu bom";
                 </div>
             </a>
         </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="switches/view.php" class="btn btn-secondary">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                    <i class="fa-sharp fa-solid fa-list-ul fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Listar Portas</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+    <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="computadores/add.php" class="btn btn-secondary">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <i class="fa fa-plus fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Novo Equipamento</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+            <a href="switches/btn_view.php" class="btn btn-secondary">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                    <i class="fa-sharp fa-solid fa-list-ul fa-5x"></i>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <p>Listar Equipamento</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 
         <!-- <div class="col-xs-6 col-sm-3 col-md-2">
             <a href="switches/view.php" class="btn btn-secondary">

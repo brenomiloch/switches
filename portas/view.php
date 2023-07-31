@@ -77,7 +77,7 @@ td{
           <th>Tipo Link</th>
           <th>Vlan Untagged</th>
           <th>Vlan Tagged</th>
-
+          <th>PATRIMÔNIO</th>
           <th><i class="fa-solid fa-gear"></i></th>
         </tr>
       </thead>

@@ -12,18 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vlan_untagged = $_POST["vlan_untagged"];
     $vlan_tagged = $_POST["vlan_tagged"];
     $patch_panel = $_POST["patch_panel"];
-    $sala = $_POST["sala"];
-    $setor = $_POST["setor"];
-    $referencia_ponto = $_POST["referencia_ponto"];
-    $tipo_equipamento = $_POST["tipo_equipamento"];
-    $modelo_equipamento = $_POST["modelo_equipamento"];
-    $endereco_ip = $_POST["endereco_ip"];
-    $endereco_mac = $_POST["endereco_mac"];
-    $numero_patrimonio = $_POST["numero_patrimonio"];
     $portas = $_POST["portas"];
 
     // Inserção dos dados no banco de dados
-    $sql = "INSERT INTO portas (id_switch, link_type, vlan_untagged,vlan_tagged,patch_panel,sala,setor,referencia_ponto,tipo_equipamento,modelo_equipamento,endereco_ip,endereco_mac,numero_patrimonio,portas) VALUES ('$id_switch', '$link_type', '$vlan_untagged','$vlan_tagged','$patch_panel','$sala','$setor','$referencia_ponto','$tipo_equipamento','$modelo_equipamento','$endereco_ip','$endereco_mac','$numero_patrimonio','$portas')";
+    $sql = "INSERT INTO portas (id_switch,link_type,vlan_untagged,vlan_tagged,patch_panel,portas) VALUES ('$id_switch','$link_type','$vlan_untagged','$vlan_tagged','$patch_panel','$portas')";
   
 
     if ($conn->query($sql) === TRUE) {
@@ -33,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // função setTimeout do JavaScript para aguardar 2 segundos (2000 milissegundos) antes de 
         // redirecionar para "index.php". Após o tempo especificado, o código window.location.href = 'index.php' 
         // redirecionará o navegador automaticamente, sem a necessidade de interação do usuário.
-        echo "<script>setTimeout(function(){ window.location.href = 'index.php'; }, 0);</script>";
+        echo "<script>setTimeout(function(){ window.location.href = '../dashboard.php'; }, 0);</script>";
 
         exit(); // Encerra o script após o redirecionamento
     } else {
@@ -63,7 +55,7 @@ include '../config.php';
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="../index.php">Navbar</a>
+    <a class="navbar-brand" href="../dashboard.php">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -83,7 +75,7 @@ include '../config.php';
     <hr>
     <form method="POST" action="">
         <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-md-2">
             <label for="inputSwitch" class="form-label">Switch</label>
             <select class="form-control" name="id_switch" required>
                 <?php
@@ -94,83 +86,41 @@ include '../config.php';
                 ?>
             </select>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2">
             <label for="inputTipo" class="form-label">PORTA</label>
             <input type="text" class="form-control" name="portas" placeholder="Tipo" required>
         </div>
-        </div>
 
-        <div class="row mb-3">
-        <div class="col-md-6">
+
+    
+        <div class="col-md-2">
             <label for="inputStatus" class="form-label">Link Tipo</label>
             <input type="text" class="form-control" name="link_type" placeholder="" required>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2">
             <label for="inputStatus" class="form-label">Vlan Untagged</label>
             <input type="text" class="form-control" name="vlan_untagged" placeholder="" required>
         </div>
-        </div>
 
-        <div class="row mb-3">
-        <div class="col-md-6">
+
+        <div class="col-md-2">
             <label for="inputStatus" class="form-label">Vlan Tagged</label>
             <input type="text" class="form-control" name="vlan_tagged" placeholder="" required>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2">
             <label for="inputStatus" class="form-label">Patch Panel</label>
             <input type="text" class="form-control" name="patch_panel" placeholder="" required>
         </div>
         </div>
 
-        <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Sala</label>
-            <input type="text" class="form-control" name="sala" placeholder="" required>
-        </div>
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Setor</label>
-            <input type="text" class="form-control" name="setor" placeholder="" required>
-        </div>
-        </div>
 
-        <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Ponto de referencia</label>
-            <input type="text" class="form-control" name="referencia_ponto" placeholder="" required>
-        </div>
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Tipo</label>
-            <input type="text" class="form-control" name="tipo_equipamento" placeholder="" required>
-        </div>
-        </div>
-
-        <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">Modelo</label>
-            <input type="text" class="form-control" name="modelo_equipamento" placeholder="" required>
-        </div>
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">IP</label>
-            <input type="text" class="form-control" name="endereco_ip" placeholder="" required>
-        </div>
-        </div>
-
-        <div class="row mb-3">
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">MAC</label>
-            <input type="text" class="form-control" name="endereco_mac" placeholder="" required>
-        </div>
-        <div class="col-md-6">
-            <label for="inputStatus" class="form-label">PATRIMÔNIO</label>
-            <input type="text" class="form-control" name="numero_patrimonio" placeholder="" required>
-        </div>
         </div>
 
         
 
         <div class="col text-center">
             <button type="submit" value="Cadastrar" class="btn btn-dark bg-gradient text-center">Salvar</button>
-            <a href="../index.php" class="btn btn-secondary">Cancelar</a>
+            <a href="../dashboard.php" class="btn btn-secondary">Cancelar</a>
         </div>
 
     </form>

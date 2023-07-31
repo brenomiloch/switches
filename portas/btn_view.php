@@ -89,6 +89,7 @@ td{
             <td><?php echo $row['link_type']; ?></td>
             <td><?php echo $row['vlan_untagged']; ?></td>
             <td><?php echo $row['vlan_tagged']; ?></td>
+
             <td><a href="#" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square fa-2x"></i></a></td>
 
 

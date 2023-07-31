@@ -48,34 +48,38 @@ echo "Deu bom";
 <div class="container mt-4 pt-4" >
     <h1>CADASTRO DE SWITCHES</h1>
     <hr>
-    <form method="POST" action="cad_switch.php">
+    <form method="POST" action="model/cad_computador.php">
         <div class="row mb-3">
         <div class="col-md-3">
-            <label for="inputName" class="form-label">Nome</label>
-            <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+            <label for="inputName" class="form-label">Host Name</label>
+            <input type="text" class="form-control" name="hostname_equipamento" placeholder="Nome" required>
             
         </div>
         <div class="col-md-3">
-            <label for="inputName" class="form-label">Fabricante</label>
-            <input type="text" class="form-control" name="fabricante" placeholder="HP" required>
+            <label for="inputName" class="form-label">Modelo</label>
+            <input type="text" class="form-control" name="modelo_equipamento" placeholder="DELL7070" required>
             
         </div>
         <div class="col-6">
-            <label for="inputName" class="form-label">IP</label>
-            <input type="text" class="form-control" name="endereco_ip" placeholder="192.168.7.X" required>
+            <label for="inputName" class="form-label">Tipo</label>
+            <input type="text" class="form-control" name="tipo_equipamento" placeholder="Desktop" required>
         </div>
-        <div class="col-6 pt-4">
+        <div class="col-4 pt-4">
             <label for="inputName" class="form-label">MAC</label>
             <input type="text" class="form-control" name="endereco_mac" placeholder="XX-XX-XX-XX-XX-XX" required>
         </div>
-        <div class="col-6 pt-4">
+        <div class="col-4 pt-4">
             <label for="inputName" class="form-label">Patrimônio</label>
             <input type="text" class="form-control" name="numero_patrimonio" placeholder="PI0123" required>
+        </div>
+        <div class="col-4 pt-4">
+            <label for="inputName" class="form-label">IP</label>
+            <input type="text" class="form-control" name="endereco_ip" placeholder="PI0123" required>
         </div>
         </div>
         <div class="col text-center">
             <button type="submit" value="Cadastrar" class="btn btn-dark bg-gradient text-center">Salvar</button>
-            <a href="../dashboard.php" class="btn btn-secondary">Cancelar</a>
+            <a href="../index.php" class="btn btn-secondary">Cancelar</a>
         </div>
 
     </form>
